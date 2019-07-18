@@ -278,15 +278,6 @@ https://custom-elements-everywhere.com/
 
 ## Conclusion?
 
-- We don't use multiple frameworks 
-- Heavily invested in React <!-- .element: class="fragment" -->
-- React doesn't fully support them <!-- .element: class="fragment" -->
-- Stencil works with React kind of <!-- .element: class="fragment" -->
-
----
-
-## Conclusion?
-
 - Stencil makes it easier to build web components
 - Would be nicer if it works better with React  <!-- .element: class="fragment" -->
 - It's a great tool for building self contained re-usable components.  <!-- .element: class="fragment" -->
