@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="tooltip.js"></script>
+  <title>Document</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    :root {
+      --primary-color: rgb(70, 166, 221);
+    }
+    .highlight {
+      background-color: rgb(151, 150, 240);
+    }
+    sr-tooltip {
+      color: rgb(3, 51, 3);
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    <sr-tooltip text="Display text on hover">
+      <span class="highlight">
+        Web Components
+      </span>
+    </sr-tooltip> are awesome.
+
+    <br />
+    <br />
+
+    <sr-tooltip class="red">
+      Default text tooltip
+    </sr-tooltip>
+
+    <br />
+    <br />
+
+    <sr-tooltip text="Some tooltip text"></sr-tooltip>
+  </p>
+</body>
+
+</html>

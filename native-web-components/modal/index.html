@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="modal.js"></script>
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 2rem;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <sr-modal closeOnDimmerClick>
+      <h1 slot="title">Please confirm</h1>
+      <p slot="main">
+        We need your confirmation to continue.
+      </p>
+    </sr-modal>
+
+    <p>Click the button to confirm.</p>
+    <button id="confirm">Confirm</button>
+  </body>
+  <script>
+    const modal = document.querySelector("sr-modal");
+    modal.addEventListener("confirm", () => {
+      console.log("Confirmed...");
+    });
+    modal.addEventListener("cancel", () => {
+      console.log("Cancelled...");
+    });
+
+    const confirmButton = document.getElementById("confirm");
+    confirmButton.addEventListener("click", () => {
+      modal.open();
+      console.log("isOpen: ", modal.isOpen);
+    });
+  </script>
+</html>
