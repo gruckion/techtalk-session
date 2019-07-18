@@ -23,6 +23,12 @@ export namespace Components {
     */
     'middle': string;
   }
+  interface SrSideDrawer {
+    'headertitle': string;
+    'open': () => Promise<void>;
+    'opened': boolean;
+  }
+  interface SrStockPrice {}
 }
 
 declare global {
@@ -33,8 +39,22 @@ declare global {
     prototype: HTMLMyComponentElement;
     new (): HTMLMyComponentElement;
   };
+
+  interface HTMLSrSideDrawerElement extends Components.SrSideDrawer, HTMLStencilElement {}
+  var HTMLSrSideDrawerElement: {
+    prototype: HTMLSrSideDrawerElement;
+    new (): HTMLSrSideDrawerElement;
+  };
+
+  interface HTMLSrStockPriceElement extends Components.SrStockPrice, HTMLStencilElement {}
+  var HTMLSrStockPriceElement: {
+    prototype: HTMLSrStockPriceElement;
+    new (): HTMLSrStockPriceElement;
+  };
   interface HTMLElementTagNameMap {
     'my-component': HTMLMyComponentElement;
+    'sr-side-drawer': HTMLSrSideDrawerElement;
+    'sr-stock-price': HTMLSrStockPriceElement;
   }
 }
 
@@ -53,9 +73,16 @@ declare namespace LocalJSX {
     */
     'middle'?: string;
   }
+  interface SrSideDrawer extends JSXBase.HTMLAttributes<HTMLSrSideDrawerElement> {
+    'headertitle'?: string;
+    'opened'?: boolean;
+  }
+  interface SrStockPrice extends JSXBase.HTMLAttributes<HTMLSrStockPriceElement> {}
 
   interface IntrinsicElements {
     'my-component': MyComponent;
+    'sr-side-drawer': SrSideDrawer;
+    'sr-stock-price': SrStockPrice;
   }
 }
 

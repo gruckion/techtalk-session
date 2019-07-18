@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .side-nav ul {
+      list-style: none;
+    }
+
+    .side-nav li {
+      margin: 1rem 0;
+    }
+
+    .side-nav a {
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+  <script type="module" src="/build/stencil-example.esm.js"></script>
+  <script nomodule src="/build/stencil-example.js"></script>
+
+</head>
+<body>
+  <button id="side-draw-btn">Open</button>
+  <sr-side-drawer id="side-drawer" headertitle="Main Menu">
+    <nav class="side-nav">
+      <ul>
+        <li><a href="/">Hi</a></li>
+      </ul>
+    </nav>
+  </sr-side-drawer>
+  <script>
+    const sideDrawButton = document.getElementById("side-draw-btn");
+    const sideDrawer = document.getElementById("side-drawer");
+
+    sideDrawButton.addEventListener("click", () => {
+      if (!sideDrawer.opened) {
+        sideDrawer.open();
+      }
+    });
+  </script>
+</body>
+</html>
