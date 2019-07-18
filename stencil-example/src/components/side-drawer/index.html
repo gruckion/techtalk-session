@@ -21,6 +21,10 @@
       text-decoration: none;
       color: black;
     }
+    .side-nav a:hover, a:active {
+      text-decoration: none;
+      font-weight: bold;
+    }
   </style>
   <script type="module" src="/build/stencil-example.esm.js"></script>
   <script nomodule src="/build/stencil-example.js"></script>
@@ -29,9 +33,10 @@
 <body>
   <button id="side-draw-btn">Open</button>
   <sr-side-drawer id="side-drawer" headertitle="Main Menu">
-    <nav class="side-nav">
+    <nav slot="nav" class="side-nav">
       <ul>
-        <li><a href="/">Hi</a></li>
+        <li><a href="http://www.google.com">Google</a></li>
+        <li><a href="http://www.yahoo.com">Yahoo</a></li>
       </ul>
     </nav>
   </sr-side-drawer>

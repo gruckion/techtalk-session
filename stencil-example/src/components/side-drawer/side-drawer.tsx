@@ -27,7 +27,7 @@ export class SideDrawer {
   };
 
   public render() {
-    let content = (<slot />);
+    let content = (<slot name="nav"/>);
 
     if (this.showContactInfo === true) {
       content = (
@@ -36,14 +36,14 @@ export class SideDrawer {
           <p>You can reach us via phone and email</p>
           <ul>
             <li>Phone: <a href="tel: 07501 999 999">07501 999 999</a></li>
-            <li>Email: <a href="mailto: something@somethig.com">something@something.com</a></li>
+            <li>Email: <a href="mailto: bob@ross.com">something@something.com</a></li>
           </ul>
         </div>
       );
     }
 
     return [
-      <div class="backdrop" />,
+      <div class="backdrop"/>,
       <aside class="side-drawer-aside">
         <header>
           <h1>{this.headertitle}</h1>

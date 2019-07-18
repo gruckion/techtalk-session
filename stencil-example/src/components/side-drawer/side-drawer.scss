@@ -1,3 +1,7 @@
+:host {
+  --primary-color: rgb(254, 139, 54);
+}
+
 .side-drawer-aside {
     position: fixed;
     top: 0;
@@ -12,7 +16,7 @@
 
     header {
       padding: 1rem;
-      background-color: black;
+      background-color: var(--primary-color);
 
       h1 {
         font-size: 1.5rem;
@@ -44,16 +48,16 @@
       button {
         width: 30%;
         background-color: white;
-        color: black;
+        color: var(--primary-color);
         text-align: center;
-        border: 1px solid black;
+        border: 1px solid var(--primary-color);
         font: inherit;
         padding: 0.15rem 0;
       }
       button.active,
       button:hover,
       button.active {
-        background-color: black;
+        background-color: var(--primary-color);
         color: white;
       }
 
